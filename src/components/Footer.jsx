@@ -1,77 +1,67 @@
 import React from "react";
-import store from "../images/Storefront.svg";
-import { FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
-import { BsDiscord } from "react-icons/bs";
+import { FaYoutube } from "react-icons/fa";
+import logo from "../images/Storefront.svg";
+import { FaDiscord } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="flex flex-col bg-black p-4">
-      {/* 1st row */}
-      <div className="flex items-center mb-4">
-        <img src={store} alt="Store" className="mr-4" />
-        <h1 className="text-white">NFT MarketPlace</h1>
-      </div>
-
-      {/* 2nd row */}
-      <div className="flex flex-col lg:flex-row lg:justify-between mt-4">
-        <div className="lg:w-1/2 mb-4 lg:mb-0">
-          <h1 className="text-white mb-4">NFT MarketPlace UI created</h1>
-          <h1 className="text-white mb-4">with anima for figma</h1>
-          <h1 className="text-white mb-4">Join our community</h1>
-          <div className="flex">
-            <a
-              href="https://www.youtube.com"
-              className="text-gray-400 text-3xl p-2"
-            >
-              <FaYoutube />
-            </a>
-            <a
-              href="https://www.discord.com"
-              className="text-gray-400 text-3xl p-2"
-            >
-              <BsDiscord />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              className="text-gray-400 text-3xl p-2"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              className="text-gray-400 text-3xl p-2"
-            >
-              <FaInstagram />
-            </a>
+    <div className="p-8 bg-black  justify-around flex flex-col md:flex-row ">
+      <div className=" flex flex-col">
+        {/* 1st  */}
+        <div className="flex space-x-3 text-white">
+          <div className="w-10">
+            <img src={logo} alt="" />
           </div>
+          <div>NFT MarketPlace</div>
         </div>
 
-        {/* Explore */}
-        <div className="lg:w-1/4 mb-4 lg:mb-0">
-          <h1 className="text-white mb-4 text-3xl">Explore</h1>
-          <h1 className="text-white mb-4">Marketplace</h1>
-          <h1 className="text-white mb-4">Ranking</h1>
-          <h1 className="text-white mb-4">Connect a wallet</h1>
+        {/* 2nd  */}
+        <div className="mt-6 text-white flex flex-col ">
+          <h5 className="m-2">NFT MarketPlace UI created</h5>
+          <h5 className="m-2">with anima for figma</h5>
+          <h5 className="m-2">Join our community</h5>
         </div>
 
-        {/* Join our weekly digest */}
-        <div className="lg:w-1/4">
-          <h1 className="text-white mb-4 text-3xl">Join our weekly digest</h1>
-          <h1 className="text-white mb-4">
-            Get exclusive promotion and updates
-          </h1>
-          <h1 className="text-white mb-4">Straight to your inbox</h1>
-          <div className="flex bg-white m-3 rounded-xl">
-            <input
-              type="text"
-              placeholder="Email Address"
-              className="px-4 py-1 bg-indigo-500 rounded-xl w-full"
-            />
+        {/* logos 3rd div  */}
+        <div className="mt-6 flex text-white space-x-3">
+          <div className="text-3xl p-1">
+            <FaYoutube />
+          </div>
+          <div className="text-3xl p-1">
+            <FaDiscord />
+          </div>
+          <div className="text-3xl p-1">
+            <FaTwitter />
+          </div>
+          <div className="text-3xl p-1">
+            <FaInstagram />
           </div>
         </div>
       </div>
-      <div className="bg-gray-500 w-full h-1 mt-4"></div>
-    </footer>
+
+      {/* explore 4th */}
+      <div className="mt-12 text-white">
+        <h1 className="m-2 md:text-3xl text-xl ">Explore</h1>
+        <h5 className="m-2 text-base ">Ranking</h5>
+        <h5 className="m-2 text-base">Connect a wallet</h5>
+      </div>
+
+      {/* join 5th */}
+      <div className="mt-12 text-white ">
+        <h1 className="m-2 md:text-3xl text-xl ">Join our weekly digest</h1>
+        <h5 className="m-2 text-base">Get exclusive promotion and updates</h5>
+        <h5 className="m-2 text-base">Straight to your inbox</h5>
+        <div className="mt-4 text-base text-white bg-white rounded-full w-full">
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="bg-purple-600 w-1/2  p-2 text-white rounded-full outline-none"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
